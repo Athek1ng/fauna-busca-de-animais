@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f6ef">
+    <title>Busca de animais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="Fauna, início">
+                <span class="brand-mark" aria-hidden="true">F</span>
+                <span>fauna<span class="brand-dot">.</span></span>
+            </a>
+            <nav class="topbar-nav" aria-label="Navegação principal">
+                <a href="index.html" aria-current="page">Buscar</a>
+                <a href="grupos.html">Grupos</a>
+            </nav>
+        </header>
+
+        <section class="intro" id="inicio" aria-labelledby="page-title">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Atlas de espécies</p>
+            <h1 id="page-title">Descubra quem<br>vive por aí<span class="title-period">.</span></h1>
+            <p class="intro-copy">Conheça animais de diferentes habitats, seus hábitos e o que faz cada espécie única.</p>
+        </section>
+
+        <section class="search-section" aria-label="Busca de animais">
+            <label class="search-label" for="animal-search">Encontre um animal</label>
+            <div class="search-row">
+                <div class="search-box">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7" />
+                        <path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                    <input id="animal-search" type="search" placeholder="Ex.: onça, arara, macaco..." autocomplete="off">
+                </div>
+                <button class="refresh-button" id="refresh-button" type="button">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 7v5h-5M4.6 9a7 7 0 0 1 11.8-2L20 12M4 17v-5h5m10.4 3a7 7 0 0 1-11.8 2L4 12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Mais espécies</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section" aria-labelledby="results-title">
+            <div class="results-heading">
+                <div>
+                    <p class="eyebrow results-eyebrow">Explore</p>
+                    <h2 id="results-title">Espécies para conhecer</h2>
+                </div>
+                <span class="result-count" id="result-count" aria-live="polite"></span>
+            </div>
+            <p class="status-message" id="status-message" role="status">Buscando animais...</p>
+            <div class="animal-grid" id="animal-grid" aria-live="polite"></div>
+        </section>
+
+        <footer class="page-footer">
+            <span>Fauna <span class="footer-dot">/</span> Pequenas descobertas, grandes mundos.</span>
+            <span>Espécies e imagens: iNaturalist</span>
+        </footer>
+    </main>
+</body>
+</html>
